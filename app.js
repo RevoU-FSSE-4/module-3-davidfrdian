@@ -20,9 +20,9 @@ function createTaskElement(task) {
     taskText.style.textDecoration = "line-through";
   });
 
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "Remove";
-  deleteButton.addEventListener("click", function () {
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove";
+  removeButton.addEventListener("click", function () {
     taskElement.remove();
   });
 
@@ -30,7 +30,7 @@ function createTaskElement(task) {
   buttonDiv.className = "buttonDiv";
 
   buttonDiv.appendChild(completeButton);
-  buttonDiv.appendChild(deleteButton);
+  buttonDiv.appendChild(removeButton);
 
   taskElement.appendChild(taskText);
   taskElement.appendChild(buttonDiv);
@@ -48,7 +48,7 @@ async function addTask() {
     taskListElement.appendChild(taskElement);
     newTaskInput.value = "";
   } else {
-    alert("add tasak cannot to be empty");
+    alert("add task cannot to be empty");
   }
 }
 
